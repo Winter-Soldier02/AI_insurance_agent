@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insurance Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h2>🛡️ Insurance Product Recommendation Bot</h2>
+        <div id="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Ask about policies...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Insurance Assistant</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="header-content">
+        <div class="bot-avatar">🛡️</div>
+        <div class="header-text">
+          <h2>Insuro Assist</h2>
+          <p>Choose your assistant mode below</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <select id="mode-toggle">
+          <option value="recommendation">🧠 Recommendation Mode</option>
+          <option value="document">📄 Document Generator</option>
+        </select>
+        <button class="action-btn" onclick="clearChat()">🗑️</button>
+      </div>
+    </div>
+
+    <div id="chat-box" class="chat-messages">
+      <div class="message bot-message">
+        <div class="message-avatar">🛡️</div>
+        <div class="message-content">
+          <p>Hello! I'm your Insurance Assistant.</p>
+          <p>Select a mode and type your query to begin.</p>
+          <div class="quick-actions">
+            <button class="quick-btn" onclick="quickMessage('Suggest a good policy for a 30-year-old')">🎯 Recommend Policy</button>
+            <button class="quick-btn" onclick="quickMessage('Create a policy for a home insurance')">📝 Generate Document</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <div class="input-container">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn" onclick="sendMessage()" disabled>➤</button>
+      </div>
+      <div id="typing-indicator" class="typing-indicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
