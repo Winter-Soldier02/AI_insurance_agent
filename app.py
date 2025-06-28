@@ -2,12 +2,17 @@ from flask import Flask, render_template, request, jsonify
 import sqlite3
 import openai
 from openai import OpenAI
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  
 
 app = Flask(__name__)
 
 client = OpenAI(
-    api_key="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"
+    api_key=os.getenv("OPENAI_API_KEY")
 )
+
 
 def fetch_policies():
     conn = sqlite3.connect('policies.db')
