@@ -82,3 +82,7 @@ The document should include:
 
     answer = response.choices[0].message.content
     return jsonify({'reply': answer})
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
