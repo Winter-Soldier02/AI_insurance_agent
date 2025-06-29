@@ -31,6 +31,31 @@ To develop a **Generative AI Insurance Agent** that:
 
 ---
 
+## HOW TO USE?
+Open the app via the deployed link
+ 
+
+Start chatting in the chatbox with questions like:
+
+ "Suggest a good insurance policy for a 30-year-old with a budget of ₹5,000/month"
+
+ "Track my claim for ID: CLM1023"
+
+ "Generate a custom policy document for life insurance"
+
+The AI agent will:
+
+ Understand your input using GPT
+
+ Recommend policies
+
+ Check claim status
+
+ Auto-generate legal-sounding policy docs
+
+No login required. Just interact directly with the chatbot UI.
+
+
 ## 🔧 Tech Stack
 
 | Technology        | Usage                              |
